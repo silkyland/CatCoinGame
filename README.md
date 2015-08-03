@@ -17,7 +17,7 @@ The Cat Coin Game is using jquery for create a game. I will fun with collect "Ca
   • SweetAlert - t4t5.github.io/sweetalert/
   • CSS Animation - daneden.github.io/animate.css/
   
-### License
+# License
 The MIT License (MIT)
 
 Copyright (c) 2015 silkyland
