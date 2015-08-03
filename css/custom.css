@@ -1,0 +1,44 @@
+.game-border{
+    border:2px solid #b92c28;
+    border-radius: 5px;
+}
+.heart-list li{
+    width: 15px;
+}
+.danger-zone{
+    position: relative;
+    left: 0px;
+    top: auto;
+}
+.height-auto{
+    height: 350px;
+    overflow: hidden;
+}
+.coin{
+    position: absolute;
+}
+.coin-bonus{
+    position: absolute;
+    width:106px;
+    z-index: 5;
+}
+.ee{
+    position: absolute;
+    width: 50px;
+    z-index: 1;
+}
+.start-game{
+    position: absolute;
+    z-index: 200;
+    top:175px;
+}
+.heart-random{
+    position: absolute;
+}
+.ghost-img{
+    width: 32px;
+}
+
+.ghost{
+    position: absolute;
+}

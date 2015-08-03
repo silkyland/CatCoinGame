@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/custom.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    <title>CAT COIN GAME :: Collect a coin</title>
+    <meta property="fb:app_id" content="916664168380392"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="CAT COIN GAME :: Collect a coin"/>
+    <meta property="og:image" content="http://devded.com/img/coin_game.jpg"/>
+    <meta property="og:description" content="This is too much fun! need you play this game"/>
+
+</head>
+<body>
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '916664168380392',
+            xfbml: true,
+            version: 'v2.4'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="col-md-offset-2 col-md-8 game-border m-t-md">
+    <h1>THE CAT COIN GAME</h1>
+
+    <div class="row m-t-sm">
+        <div class="col-md-4 animation-score">
+            <span class="font-bold">Score </span><span id="score"> 0 </span> &nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="col-md-4">
+            <span class="font-bold">Your High Score :</span> <span id="height-score">0</span>
+        </div>
+        <div class="col-md-4">
+            <ul id="heart" class="pull-right list-inline text-danger heart-list">
+                <li><i class="fa fa-heart live"></i></li>
+                <li><i class="fa fa-heart live"></i></li>
+                <li><i class="fa fa-heart live"></i></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bg-warning height-auto  danger-zone">
+            </div>
+            <div class="coin" id="coin">
+                <a href="javascript:addScore(1)"><img src="img/coin.gif" alt="cat-coin"></a>
+            </div>
+            <div class="ghost" id="ghost">
+                <a href="javascript:addScore(-5)"><img src="img/danger.gif" alt="danger" class="ghost-img"></a>
+            </div>
+            <div class="text-center" id="coin-bonus"><a href="javascript:void(0);">
+                <img src="img/coin.gif" class="coin-bonus" alt="cat-coin"></a>
+            </div>
+            <div class="text-center heart-random" id="heart-random">
+                <a href="javascript:addHeart(1);">
+                    <span><i class="fa fa-heart text-danger fa-2x"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6 col-xs-offset-3 col-xs-6 text-center start-game">
+            <button class="btn btn-success m-t-md" id="buttonStartGame" onclick="startGame()">Start Game</button>
+            <div class="share-btn m-t-sm" id="share-btn">
+                <div class="fb-like" data-href="http://devded.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            </div>
+        </div>
+        <div class="clearfix">&nbsp;</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center m-t-md m-b-md">
+                Love it?
+                <div class="fb-like" data-href="http://devded.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            </div>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- devded-920 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9762989020043907"
+                 data-ad-slot="8904869878"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">How to play?</div>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Click "Start Game" button.</li>
+                    <li>Collect a "Cat Coin" by clicking a coin. Your score will add by 1 when you clicked at it.</li>
+                    <li>Avoid to click background without "Cat Coin" or "Heart", Your life (heart) will reduce by 1. If
+                        life equal 0 your game will over.
+                    </li>
+                    <li>Avoid to click a "Pirate" your score will reduce by 5 point.</li>
+                    <li>"Bonus coin" can click anytime you need when it appearing.</li>
+                </ul>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Credit</div>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>jQuery javaScript Framework - jquery.com</li>
+                    <li>SweetAlert - t4t5.github.io/sweetalert/</li>
+                    <li>CSS Animation - daneden.github.io/animate.css/</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <p>Created by Bundit Nuntates (<a href="https://fb.com/silkyland">facebook</a>) คุณสามารถทำซ้ำ คัดลอก
+                ดัดแปลง และถอดเครดิตออกได้ตามใจต้องการ โดยไม่มีความผิดทางกฏหมาย</p>
+        </div>
+    </div>
+
+
+</div>
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script src="js/game-engine.js?version=2">
+</script>
+</html>
